@@ -12,8 +12,9 @@ export default function Home() {
           It is a little messy, but I like it this way.
         </div>
         <div className="w-full max-w-5xl mt-12 justify-center md:flex">
-          I'm working on a few things and will post them here when they are
-          done.
+          {
+            "I'm working on a few things and will post them here when they are done."
+          }
         </div>
         <div className="w-full max-w-5xl mt-12 justify-between md:flex">
           <a href="https://github.com/tbrixey" target="_blank">
