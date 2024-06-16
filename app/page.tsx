@@ -3,42 +3,63 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div>
+      <div className="bg-slate-600 text-center">SITE IS WORK IN PROGRESS</div>
       <main className="flex w-full items-start min-h-screen font-mono flex-col p-12 lg:p-24">
-        <div className="w-full max-w-8xl flex">Hey! My name is Trevor.</div>
-        <div className="w-full max-w-8xl justify-center flex">
-          Welcome to my site.
+        <div className="flex flex-col justify-center items-center">
+          <div className="text-4xl">
+            <Image
+              src="/avatar-placeholder.jpg"
+              className="rounded-full"
+              alt="Profile Picture of Me"
+              width={300}
+              height={300}
+            />
+          </div>
+          <div className="mt-12 text-4xl">
+            Hey! My name is Trevor Brixey. Check out my projects and what
+            I&apos;ve been working on.
+          </div>
         </div>
-        <div className="w-full max-w-8xl justify-end flex">
-          It is a little messy, but I like it this way.
+        <div className="flex justify-center items-center flex-col w-full">
+          <div className="mt-12 mb-8 text-4xl underline">Projects</div>
+          <div>
+            <figure className="bg-slate-700 max-w-sm rounded overflow-hidden shadow-lg relative cursor-pointer hover:bg-slate-600">
+              <Image
+                className="w-full object-contain"
+                src="/bread-cat.jpg"
+                alt="A cat with bread on its head"
+                width={200}
+                height={200}
+              />
+              <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">My Portfolio</div>
+                <p className="text-base">
+                  The site you are currently on! You don&apos;t need a picture
+                  so here is a cat
+                </p>
+              </div>
+              <div className="px-6 pt-4 pb-2">
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  Next.js
+                </span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  Vercel
+                </span>
+                <a
+                  href="https://github.com/tbrixey/my-site"
+                  target="_blank"
+                  className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 underline"
+                >
+                  GitHub
+                </a>
+              </div>
+            </figure>
+          </div>
         </div>
-        <div className="w-full max-w-8xl mt-12 justify-center flex">
-          {
-            "I'm working on a few things and will post them here when they are done."
-          }
-        </div>
-        <div className="w-full mt-12 justify-between flex">
-          <a href="https://github.com/tbrixey" target="_blank">
-            <button className="rounded-full bg-[#4078c0] px-8 py-2">
-              GitHub
-            </button>
-          </a>
-          <a href="mailto:trevorbrixeyapps@gmail.com">
-            <button className="rounded-full bg-[#4078c0] px-8 py-2">
-              Contact me
-            </button>
-          </a>
-        </div>
-        <div className="w-full flex items-center  mt-4 flex-col">
-          <span>here is a good cat picture</span>
-          <Image
-            alt="bread-cat"
-            width="256"
-            height="256"
-            src="/bread-cat.jpg"
-          />
+        <div className="flex justify-center items-center flex-col w-full">
+          <div className="mt-12 mb-8 text-4xl underline">Contact Info</div>
         </div>
       </main>
-      <footer className="font-mono float-right">xD</footer>
     </div>
   );
 }
